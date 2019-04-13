@@ -1,0 +1,9 @@
+{% load account %}
+<li><a href="{% url 'index' %}">Home</a></li>
+<li><a href="{% url 'profile' %}">Profile</a></li><br><br>
+{% if not user.has_usable_password %}
+<a href="{% url 'account_set_password' %}">set your password</a><br>
+{% else %}
+<a href="{% url 'account_reset_password' %}">Change password</a><br>
+{% endif %}
+<a href="{% url 'account_email' %}">Add email</a><br>

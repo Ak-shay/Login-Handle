@@ -1,0 +1,6 @@
+{% load account %}
+<a href="{% url 'index' %}">Home</a><br>
+<a href="{% url 'settings' %}">Settings</a>
+<h4>USERNAME:{{ user.get_username }}</h4>
+<h4>NAME:{{ user.first_name }}  {{ user.last_name }}</h4>
+<h4>EMAIL:{{ user.email }}</h4>

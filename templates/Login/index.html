@@ -1,0 +1,7 @@
+{% if user.is_authenticated %}
+<li><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
+<li><a href="{% url 'profile' %}">Profile</a></li>
+{% else %}
+<li><a class="nav-link" href="{% url 'account_login' %}"><span class="glyphicon glyphicon-log-in"></span> login</a></li><br>
+<li><a class="nav-link" href="{% url 'account_signup' %}"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
+{% endif %}
